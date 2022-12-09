@@ -1,0 +1,117 @@
+.btn{
+    padding: .4em .8em;
+    background-color: #000;
+    color: #fff;
+
+    display: inline-flex;
+    justify-self: center;
+
+    transition: background-color .5s;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: burlywood;
+}
+
+.btn-ok{
+    background-color: #434343;
+}
+.btn-ok:hover{
+    background-color: #7e6c6c;
+}
+
+.btn-toggle{
+    --radius:24px;
+    background-color: gray;
+    color: #434343;
+    
+    box-sizing: border-box;
+    width: calc(var(--radius) * 2);
+    height: var(--radius);
+    border-top-left-radius: calc(var(--radius) / 2);
+    border-bottom-left-radius: calc(var(--radius) / 2);
+
+    border: none;
+    position: relative;
+
+    text-indent: -999px;
+
+
+}
+.btn-toggle::before{
+    content: 'hahaha';
+    
+    box-sizing: border-box;
+    height: calc(var(--radius) - 4px);
+    width: calc(var(--radius) - 4px);
+    background-color: black;
+    border-radius: calc(var(--radius) - 4px);
+    text-indent: -999px;
+    
+
+    position: absolute;
+    left: 2px;
+
+    transition: left 1.5s, top 0.5s;
+}
+
+.btn-toggle-on{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-top-right-radius: calc(var(--radius) / 2);
+    border-bottom-right-radius: calc(var(--radius) / 2);
+
+    background-color: #87f195;
+    
+}
+
+.btn-toggle-on::before{
+    background-color: #55955e;
+    
+    /* right: 2px; */
+
+    left: 24px;
+}
+.btn-toggle:hover::before{
+    background-color: #55955e;
+    
+    /* right: 2px; */
+
+    left: 24px;
+}
+
+.btn-toggle:hover,
+.btn-toggle-on{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-top-right-radius: calc(var(--radius) / 2);
+    border-bottom-right-radius: calc(var(--radius) / 2);
+
+    background-color: #87f195;
+
+
+}
+
+.btn-cancel{
+
+}
+
+/* -------------------------------- */
+@media (min-width: 500px){
+    .btn-toggle-md{
+        --radius:30px;
+    }
+    /* .body{    
+        flex-direction: row;
+    } */
+}
+
+@media (min-width: 800px){
+    /* .body{    
+        flex-direction: row;
+    } */
+}
+

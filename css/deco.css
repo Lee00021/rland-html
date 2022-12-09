@@ -1,0 +1,24 @@
+.deco::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    /* background: url(/image/density_medium_FILL0_wght400_GRAD0_opsz48.svg) no-repeat left center;
+    background-size: 16px 16px; */
+    background-color: black;
+    mask-size: 16px 16px;
+    -webkit-mask-size: 16px 16px;
+    transition: 1.5s;
+}
+
+.deco-notice::before{
+    mask-image: url(/image/html_FILL0_wght400_GRAD0_opsz48.svg);
+    -webkit-mask-image: url(/image/html_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
+.deco-blue::before{
+    background-color: blue;
+}
+.deco-red::before{
+    background-color: red;
+}
